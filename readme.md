@@ -10,3 +10,8 @@ _Exemples are stored in ```exemples folder```_
 ## Arithmetic sequence sum
 - Loop
 - Math and performance
+
+```js
+// Simple arithmetic sequence sum
+let sum = (n * (n + 1)) / 2;
+```
