@@ -7,11 +7,6 @@ _Exemples are stored in ```exemples folder```_
 - Unrecursive algo
 
 
-## Fibonacci
-- Recursive algo
-- Unrecursive algo
-
-
 ## Arithmetic sequence sum
 - Loop
 - Math and performance
