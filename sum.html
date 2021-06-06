@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+/*
+[i] =>  value
+--------------
+0   =>  0
+1   =>  1
+2   =>  3
+3   =>  6
+4   =>  10
+5   =>  15
+6   =>  21
+--------------
+*/
+
+// algo solution
+function sumUntil(end) {
+    let result = 0;
+    for(let i = 0 ; i <= end ; i++) {
+        result += i;
+    }
+    return result;
+}
+
+
+// math solution
+function sumUntil2(end) {
+    // https://fr.wikipedia.org/wiki/Somme_(arithm%C3%A9tique)
+    return (end * (end + 1 )) / 2;
+}
+
+
+
+let start = new Date();
+let max = 100000000000;
+console.log(max + ' : ' + sumUntil(max));
+
+
+/*
+for(let i = 0 ; i <= max; i++) {
+    sumUntil(i)
+    // console.log(i + ' : ' + sumUntil(i));
+}
+*/
+
+
+
+
+let end = new Date();
+let elapsed = end.getTime() - start.getTime();
+console.log('%c' + elapsed, 'color: #fff; font-size: 1rem; background-color:#f00');
+
+start = new Date();
+
+/*
+for(let i = 0 ; i <= max; i++) {
+    sumUntil2(i)
+    // console.log('%c' + i + ' : ' + sumUntil2(i), 'color: #0bf; font-size: 1rem; background-color:#ffa');
+}
+*/
+console.log(max + ' : ' + sumUntil2(max));
+
+end = new Date();
+elapsed = end.getTime() - start.getTime();
+console.log('%c' + elapsed, 'color: #fff; font-size: 1rem; background-color:#f00');
+
+
+
+</script>
+
+</body>
+</html>
