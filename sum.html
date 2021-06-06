@@ -35,13 +35,14 @@ function sumUntil(end) {
 // math solution
 function sumUntil2(end) {
     // https://fr.wikipedia.org/wiki/Somme_(arithm%C3%A9tique)
-    return (end * (end + 1 )) / 2;
+    // return (end * (end + 1 )) / 2;
+    return (Math.pow(end,2) + end ) / 2;
 }
 
 
 
 let start = new Date();
-let max = 100000000000;
+let max = 10000000000;
 console.log(max + ' : ' + sumUntil(max));
 
 
