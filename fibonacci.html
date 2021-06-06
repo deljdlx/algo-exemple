@@ -8,10 +8,21 @@
 </head>
 <body>
 
+<p>
+
+    <strong>
+        Open console dev tools to see results
+    </strong>
+
+</p>
+
 <script>    
+// Fibonacci suite :
 // 0 1 1 2 3 5 8 13 21 34 55 ...
 
-function fiboN(rank) {
+
+// ===================================================================
+function fiboLoop(rank) {
     let result = 0;
 
     if(rank <= 1) {
@@ -26,11 +37,11 @@ function fiboN(rank) {
             lastValue = result;
         }
     }
-    
     return result;
 }
 
-function fibo(rank) {
+// ===================================================================
+function fiboRecursive(rank) {
     if(rank == 0) {
         return 0;
     }
@@ -38,17 +49,20 @@ function fibo(rank) {
         return 1;
     }
     else {
-        return fibo(rank-2) + fibo(rank-1)
+        return fiboRecursive(rank-2) + fiboRecursive(rank-1)
     }
 }
 
-// dsfgsdf !
-
+// ===================================================================
 
 let rank = 8;
 
-console.log(fibo(rank));
-console.log('%c' + fiboN(rank), 'color: #0bf; font-size: 1rem; background-color:#fff');
+console.log('%c' + 'Recursive call', 'color: #0bf; font-size: 1rem; background-color:#ffa');
+console.log('%cRestult :' + fiboRecursive(rank), 'color: #0bf; font-size: 1rem; background-color:#fff');
+
+
+console.log('%c' + 'Loop call', 'color: #0bf; font-size: 1rem; background-color:#ffa');
+console.log('%cRestult :' + fiboLoop(rank), 'color: #0bf; font-size: 1rem; background-color:#fff');
 
 
 
