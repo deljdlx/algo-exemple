@@ -1,6 +1,6 @@
 # Some classical algo exemples
 
-_Exemples are stored in```exemples folder```_
+_Exemples are stored in ```exemples folder```_
 
 ## Fibonacci sequence
 - Recursive algo
